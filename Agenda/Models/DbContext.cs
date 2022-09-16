@@ -11,6 +11,7 @@ namespace Agenda.Models
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Contato> Contatos { get; set; }
 
 
         private void CarregarUsuarios()

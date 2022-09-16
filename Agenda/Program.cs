@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
  
 builder.Services.AddDbContext<Context>(opt => opt.UseInMemoryDatabase(databaseName: "Usuarios"));
+builder.Services.AddDbContext<Context>(opt => opt.UseInMemoryDatabase(databaseName: "Contatos"));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
