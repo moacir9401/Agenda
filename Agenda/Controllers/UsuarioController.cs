@@ -22,19 +22,21 @@ namespace Agenda.Controllers
             return View(usuarios);
         }
          
-        public ActionResult Details(int id)
+        [HttpGet]
+        public async Task<ActionResult> VisualizarUsuario(long id)
         {
-            var usuario =  _context.Usuarios.FirstAsync(u => u.Id == id);
+            var usuario = await _context.Usuarios.FirstAsync(u => u.Id == id);
             return View(usuario);
         }
-         
-        public ActionResult Create()
+
+        [HttpGet]
+        public ActionResult CriarUsuario()
         {
             return View();
         } 
 
         [HttpPost]
-        public ActionResult Create(Usuario usuario)
+        public ActionResult CriarUsuario(Usuario usuario)
         {
             try
             { 
@@ -48,15 +50,16 @@ namespace Agenda.Controllers
                 return View();
             }
         }
-         
-        public ActionResult Edit(int id)
+
+        [HttpGet]
+        public async Task<ActionResult> EditarUsuario(int id)
         {
-            var usuario = _context.Usuarios.FirstAsync(u => u.Id == id);
+            var usuario = await _context.Usuarios.FirstAsync(u => u.Id == id);
             return View(usuario);
         }
          
         [HttpPost]
-        public ActionResult Edit(int id, Usuario usuario)
+        public ActionResult EditarUsuario(int id, Usuario usuario)
         {
             try
             {
@@ -70,18 +73,16 @@ namespace Agenda.Controllers
                 return View();
             }
         }
+          
          
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-         
-        [HttpPost]
-        public ActionResult Delete(Usuario usuario)
+        [HttpGet]
+        public async Task<ActionResult> ExcluirUsuario(int id)
         {
             try
             {
+                var usuario = await _context.Usuarios.FirstAsync(u => u.Id == id);
                 _context.Usuarios.Remove(usuario);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch

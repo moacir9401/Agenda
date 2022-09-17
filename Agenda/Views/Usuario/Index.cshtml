@@ -1,8 +1,10 @@
 ﻿@model List<Usuario>
 
-    <div class="text-center display-4 m-5">
-        Usuários
-    </div>
+<div class="text-center display-4 m-5">
+    Usuários
+</div>
+
+<a class="btn btn-success form-control mb-5" asp-controller="Usuario" asp-action="CriarUsuario">Criar Novo usuário</a> 
 
 <table class="table table-hover table-striped table-bordered">
     <thead>
@@ -10,25 +12,31 @@
             <th>Email</th>
             <th>Nome</th>
             <th>Senha</th>
-            <th>Inserir</th>
+            <th>Visualizar</th>
             <th>Editar</th>
+            <th>Excluir</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var usuario in Model)
         {
             <tr>
-                <td>@usuario.Email</td> 
+                <td>@usuario.Email</td>
                 <td>@usuario.Nome</td>
                 <td>@usuario.Senha</td>
                 <td class="text-center">
-                    <a class="text-danger  " asp-controller="Usuario" asp-action="Create">
-                        <i class="fa-solid fa-plus"></i>
+                    <a class="text-primary text-center" asp-controller="Usuario" asp-action="VisualizarUsuario" asp-route-id="@usuario.Id">
+                        <i class="fa-solid fa-file"></i>
                     </a>
                 </td>
                 <td class="text-center">
-                    <a class="text-success text-center" asp-controller="Usuario" asp-action="Edit" asp-route-id="@usuario.Id">
+                    <a class="text-success text-center" asp-controller="Usuario" asp-action="EditarUsuario" asp-route-id="@usuario.Id">
                         <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </td>
+                <td class="text-center">
+                    <a class="text-danger text-center" asp-controller="Usuario" asp-action="ExcluirUsuario" asp-route-id="@usuario.Id">
+                        <i class="fa-sharp fa-solid fa-trash"></i>
                     </a>
                 </td>
             </tr>
