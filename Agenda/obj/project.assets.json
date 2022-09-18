@@ -2055,11 +2055,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\moaci.MOACIR.000\\source\\repos\\Agenda\\Agenda\\Agenda.csproj",
+      "projectUniqueName": "E:\\repos\\Agenda\\Agenda\\Agenda.csproj",
       "projectName": "Agenda",
-      "projectPath": "C:\\Users\\moaci.MOACIR.000\\source\\repos\\Agenda\\Agenda\\Agenda.csproj",
+      "projectPath": "E:\\repos\\Agenda\\Agenda\\Agenda.csproj",
       "packagesPath": "C:\\Users\\moaci.MOACIR.000\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\moaci.MOACIR.000\\source\\repos\\Agenda\\Agenda\\obj\\",
+      "outputPath": "E:\\repos\\Agenda\\Agenda\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\moaci.MOACIR.000\\AppData\\Roaming\\NuGet\\NuGet.Config",

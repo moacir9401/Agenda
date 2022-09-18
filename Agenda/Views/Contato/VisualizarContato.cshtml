@@ -1,0 +1,37 @@
+﻿@model Contato
+
+<div class="container">
+    <div class="panel mx-auto jus">
+        <div class="panel-body">
+            <div class="col-4 mx-auto">
+                <input type="text" class="form-control" asp-for="Id" readonly />
+                <div class="row">
+                    <div class="col-12">
+                        <label asp-for="Nome" class="control-label pt-2"></label>
+                        <input type="text" class="form-control" asp-for="Nome" readonly />
+                        <span asp-validation-for="Nome" class="text-danger" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label asp-for="Email" class="control-label pt-2"></label>
+                        <input type="text" class="form-control" asp-for="Email" readonly />
+                        <span asp-validation-for="Email" class="text-danger" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label asp-for="Telefone" class="control-label pt-2"></label>
+                        <input type="text" class="form-control" asp-for="Telefone" readonly />
+                        <span asp-validation-for="Telefone" class="text-danger" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

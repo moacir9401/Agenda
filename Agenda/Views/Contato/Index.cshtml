@@ -1,0 +1,45 @@
+﻿@model List<Contato>
+
+<div class="text-center display-4 m-5">
+    Usuários
+</div>
+
+<a class="btn btn-success form-control mb-5" asp-controller="Contato" asp-action="CriarContato">Criar Novo contato</a> 
+
+<table class="table table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Visualizar</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contato in Model)
+        {
+            <tr>
+                <td>@contato.Email</td>
+                <td>@contato.Nome</td>
+                <td>@contato.Telefone</td>
+                <td class="text-center">
+                    <a class="text-primary text-center" asp-controller="Contato" asp-action="VisualizarContato" asp-route-id="@contato.Id">
+                        <i class="fa-solid fa-file"></i>
+                    </a>
+                </td>
+                <td class="text-center">
+                    <a class="text-success text-center" asp-controller="Contato" asp-action="EditarContato" asp-route-id="@contato.Id">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </td>
+                <td class="text-center">
+                    <a class="text-danger text-center" asp-controller="Contato" asp-action="ExcluirContato" asp-route-id="@contato.Id">
+                        <i class="fa-sharp fa-solid fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

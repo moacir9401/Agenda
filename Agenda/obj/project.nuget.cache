@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lKmb+nG5dR9GVTk6uKbdMjrvS+HPAXzHg/4/93A0+Oy1FrkSjqMYIp08XwwfssZcNzpsmHloVhnOiSdZYVFVjQ==",
+  "dgSpecHash": "PXdtWbysF1DOVmRMUBn0PZkaYpFPOH7vC2Te8LBB+LRwNBvmVs0pWIpso22S0LGUXcanv5g/gt2G2AxaE6aNXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moaci.MOACIR.000\\source\\repos\\Agenda\\Agenda\\Agenda.csproj",
+  "projectFilePath": "E:\\repos\\Agenda\\Agenda\\Agenda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moaci.MOACIR.000\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\moaci.MOACIR.000\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
