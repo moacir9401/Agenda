@@ -1,7 +1,9 @@
 ﻿using Agenda.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Data;
 using System.Diagnostics;
 
 namespace Agenda.Controllers
@@ -17,7 +19,7 @@ namespace Agenda.Controllers
             _context = context;
 
         }
-
+         
         public async Task<IActionResult> Index()
         {
              
