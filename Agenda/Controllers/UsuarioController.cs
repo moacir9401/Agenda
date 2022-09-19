@@ -1,10 +1,12 @@
 ﻿using Agenda.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Agenda.Controllers
 {
+    [Authorize]
     public class UsuarioController : Controller
     {
         private readonly Context _context;

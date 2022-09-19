@@ -8,6 +8,8 @@ using System.Diagnostics;
 
 namespace Agenda.Controllers
 {
+
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -19,7 +21,7 @@ namespace Agenda.Controllers
             _context = context;
 
         }
-         
+
         public async Task<IActionResult> Index()
         {
              
